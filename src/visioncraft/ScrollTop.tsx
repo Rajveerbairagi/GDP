@@ -1,13 +1,13 @@
+'use client';
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
-    // Use a timeout to ensure scroll happens after navigation completes
     const timeout = setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "instant" }); // use "auto" or "instant" to avoid delay
+      window.scrollTo({ top: 0, behavior: "instant" });
     }, 0);
 
     return () => clearTimeout(timeout);

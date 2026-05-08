@@ -1,5 +1,6 @@
+'use client';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
@@ -9,7 +10,7 @@ const Header = () => {
     <nav className="bg-transparent backdrop-blur-md shadow-lg fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <img
               src="/Gdp.png"
               alt="GDP"

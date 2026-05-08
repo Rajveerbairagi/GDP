@@ -1,11 +1,13 @@
+'use client';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const Codestruct: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleClick = () => {
-    navigate('/codestruct'); 
+    router.push('/codestruct');
   };
 
   return (
@@ -20,13 +22,12 @@ const Codestruct: React.FC = () => {
         >
           <div className="order-2 md:order-1">
             <motion.img
-              src="https://lh3.google.com/u/2/d/1bUoKmrDrZsNON-ikcqYOJoitPZbwSWNj=w1868-h925-iv1"
+              src="/codestruct-event.jpg"
               alt="Code Struct"
               className="w-full max-w-md mx-auto"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              
             />
           </div>
           

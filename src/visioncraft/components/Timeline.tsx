@@ -1,9 +1,13 @@
+'use client';
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 // Import Lottie JSON (adjust path as needed)
 import arrowAnimation from '../assests/arrow4.json';
+
 
 // Interface for schedule data
 interface ScheduleItem {

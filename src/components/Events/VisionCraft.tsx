@@ -1,11 +1,13 @@
+'use client';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const Visioncraft: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleClick = () => {
-    navigate('/visioncraft'); 
+    router.push('/visioncraft');
   };
 
   return (
@@ -20,13 +22,12 @@ const Visioncraft: React.FC = () => {
         >
           <div className="order-2 md:order-1">
             <motion.img
-              src="https://lh3.google.com/u/2/d/1FY4HJQ8rsPEt_otYcXDd51Vm4RamLDoH=w4000-h8220-iv1"
+              src="/visioncraft-event.jpg"
               alt="Vision Craft"
               className="w-full max-w-md mx-auto"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              
             />
           </div>
           

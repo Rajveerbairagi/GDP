@@ -1,6 +1,20 @@
+'use client';
 import { motion } from 'framer-motion';
-import { Suspense, Component, ReactNode } from 'react';
-import GDPThree from './GDPThree';
+import { Suspense, Component, ReactNode, lazy } from 'react';
+import dynamic from 'next/dynamic';
+
+// Dynamically import GDPThree with SSR disabled — Three.js requires browser APIs
+const GDPThree = dynamic(() => import('./GDPThree'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center h-full">
+      <div className="text-white text-center">
+        <div className="animate-spin text-4xl mb-2">⚡</div>
+        <div>Loading 3D Model...</div>
+      </div>
+    </div>
+  ),
+});
 
 // Custom Error Boundary
 interface Props {
@@ -104,16 +118,7 @@ const Hero = () => {
             className="w-full h-full max-w-3xl relative z-20"
           >
             <ThreeErrorBoundary>
-              <Suspense fallback={
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-white text-center">
-                    <div className="animate-spin text-4xl mb-2">⚡</div>
-                    <div>Loading 3D Model...</div>
-                  </div>
-                </div>
-              }>
-                <GDPThree />
-              </Suspense>
+              <GDPThree />
             </ThreeErrorBoundary>
           </motion.div>
         </div>

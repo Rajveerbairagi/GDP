@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -14,9 +15,9 @@ export default {
       },
       fontFamily: {
         neoneon: ['Neoneon', 'cursive'],
-        jetbrains: [ 'jetbrains', 'Helvetica'],
+        jetbrains: ['jetbrains', 'Helvetica'],
       },
     },
   },
   plugins: [],
-}
+};

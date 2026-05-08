@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Neoneon';
+  src: url('/fonts/NEONEON.otf') format('opentype');
+  src: url('/fonts/Neoneon.woff') format('woff');
+  src: url('/fonts/Neoneon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jetbrains';
+  src: url('/fonts/JetBrainsMono[wght].ttf') format('truetype');
+  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}

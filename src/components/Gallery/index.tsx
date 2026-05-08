@@ -1,3 +1,4 @@
+'use client';
 import { motion } from 'framer-motion';
 import GalleryImage from './GalleryImage';
 import { galleryImages } from './galleryData';

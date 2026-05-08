@@ -1,3 +1,4 @@
+'use client';
 import { motion } from 'framer-motion';
 
 const InkSpace = () => {
@@ -12,13 +13,12 @@ const InkSpace = () => {
         >
           <div className="order-2 md:order-1">
             <motion.img
-              src="https://lh3.google.com/u/0/d/1IAv3rj2NcPAXUj6BXN4tghsAWjqGquzs=w1920-h877-iv1"
+              src="/inkspace.jpg"
               alt="GDP's InkSpace"
               className="w-full max-w-md mx-auto"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              
             />
           </div>
           

@@ -1,8 +1,12 @@
+'use client';
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 import arrowAnimation from '../assests/arrow2.json';
+
 
 interface ScheduleItem {
   day: string;

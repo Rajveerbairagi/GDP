@@ -1,3 +1,4 @@
+'use client';
 import { motion } from 'framer-motion';
 import DepartmentCard from './DepartmentCard';
 import { departments } from './departments';
